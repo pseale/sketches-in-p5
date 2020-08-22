@@ -3,6 +3,12 @@
 :: for an illuminated manuscript, see build.cmd. I don't have
 :: the energy to comment this one; just going to make the magic happen.
 
+echo *******************************************
+echo *                                         *
+echo *   [91mNOTE: this only works for me, Peter[0m   *
+echo *                                         *
+echo *******************************************
+
 pushd
 
 call build.cmd
