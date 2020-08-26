@@ -41,7 +41,7 @@ let sketch = (p5) => {
         p5.strokeWeight(5);
       }
       p5.fill(c);
-      p5.triangle(radiusX, radiusY, startX, startY, endX, endY);
+      p5.triangle(radiusX, radiusY * 1.39, startX, startY, endX, endY);
       if (inputs.showBorder) {
         p5.noStroke();
       }
@@ -55,7 +55,7 @@ let sketch = (p5) => {
       p5.textFont("Verdana");
       p5.textSize(fontSize);
       p5.text("livecoding", 0, radiusY);
-      p5.text(".tv", radiusX, radiusY + fontSize * 0.8);
+      p5.text(".tv", radiusX * 0.9, radiusY + fontSize * 0.8);
     }
   };
 };
