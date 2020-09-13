@@ -6,6 +6,10 @@
 
 :: I didn't know that :: started a comment until I saw https://stackoverflow.com/questions/11269338/how-to-comment-out-add-comment-in-a-batch-cmd
 
+:: push our current working directory to the stack, so we can return here afterwards
+:: this only matters if 1) you're specifically in the cmd shell, 2) invoking this script from another directory, 3) want to return to that directory when this finishes
+pushd
+
 :: %~dp0 - https://stackoverflow.com/a/3827582
 :: My explanation: %~dp0 is the folder your batch file is sitting in. So if you're in Z:\homedir\batch.cmd then %~dp0 is Z:\homedir
 cd %~dp0
@@ -65,6 +69,7 @@ echo *      [91mAn error occurred. See above[0m       * 1>&2
 echo *                                         * 1>&2
 echo ******************************************* 1>&2
 
+popd
 exit /b %ERRORLEVEL%
 
 :: Raymond Chen told me to do this https://devblogs.microsoft.com/oldnewthing/20120802-00/?p=6973
@@ -75,3 +80,5 @@ exit /b %ERRORLEVEL%
 ::
 :: It can be said that there is ample room for improvement in batch file scripting.
 :end
+
+popd
