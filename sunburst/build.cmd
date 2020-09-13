@@ -13,7 +13,8 @@ cd %~dp0
 :: delete any files that are in this folder, quietly. Protip: never attempt to guess
 :: behavior of copy,move,rename,delete operations because none of the behavior makes sense. So
 :: test whatever you do. I tested this line below, and got it wrong 5 times before settling here.
-del .\dist\* /q
+:: EDIT: 6 times. https://stackoverflow.com/a/7331075
+RD /S /Q .\dist
 :: Because batch files don't have a $ErrorActionPreference or 'set -e', I have
 :: to check exit codes after every command.
 IF %ERRORLEVEL% NEQ 0 GOTO Error
