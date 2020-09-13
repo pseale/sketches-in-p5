@@ -5,7 +5,7 @@ export default function getInputs() {
   const magnitudeFromQueryString = Number(urlParams.get("m") || 5);
   const raysFromQueryString = Number(urlParams.get("rays") || 32);
   const rotationSpeedFromQueryString = Number(urlParams.get("speed") || 1);
-  const showBanner = !!urlParams.get("showBanner") || true;
+  const showBanner = !!urlParams.get("showBanner");
   const showBorder = !!urlParams.get("showBorder");
 
   const redWhite = ["rgb(188, 45, 0)", "rgb(255, 255, 255, 0)"];
