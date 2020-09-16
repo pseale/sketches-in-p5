@@ -11,10 +11,11 @@ echo *******************************************
 
 pushd
 
+cd %~dp0
+
 call build.cmd
 IF %ERRORLEVEL% NEQ 0 GOTO Error
 
-cd %~dp0
 
 :: hope the files are there to copy
 :: hope I never need to delete files, because this doesn't delete anything
