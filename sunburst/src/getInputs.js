@@ -1,3 +1,8 @@
+function convertBooleanValue(urlParams, key) {
+  const value = urlParams.get(key);
+  return String(value).toLocaleLowerCase() === "true";
+}
+
 export default function getInputs() {
   // get stuff from the outside world
   const urlParams = new URLSearchParams(window.location.search);
@@ -5,8 +10,8 @@ export default function getInputs() {
   const magnitudeFromQueryString = Number(urlParams.get("m") || 5);
   const raysFromQueryString = Number(urlParams.get("rays") || 32);
   const rotationSpeedFromQueryString = Number(urlParams.get("speed") || 1);
-  const showBanner = !!urlParams.get("showBanner");
-  const showBorder = !!urlParams.get("showBorder");
+  const showBanner = !convertBooleanValue(urlParams, "hideBanner");
+  const showBorder = convertBooleanValue(urlParams, "showBorder");
 
   const redWhite = ["rgb(188, 45, 0)", "rgb(255, 255, 255, 0)"];
   const yellowWhite = ["rgb(255, 255, 0)", "rgb(255)"];
