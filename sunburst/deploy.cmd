@@ -28,6 +28,11 @@ copy .\dist\* ..\..\pseale.github.io
 IF %ERRORLEVEL% NEQ 0 GOTO Error
 cd ..\..\pseale.github.io
 IF %ERRORLEVEL% NEQ 0 GOTO Error
+
+:: we don't care if git complains that we're already on master branch
+:: hope git didn't error for ANY OTHER REASON
+git checkout master
+
 git add -A
 IF %ERRORLEVEL% NEQ 0 GOTO Error
 git commit -m "publish /"
