@@ -1,4 +1,10 @@
 import * as sketch from "./sketch";
 import defaults from "./defaults";
+import { gamepadConnected, gamepadDisconnected } from "./gamepad";
 
-sketch.init(defaults(p5));
+window.onload = () => {
+  window.addEventListener("gamepadconnected", gamepadConnected, false);
+  window.addEventListener("gamepaddisconnected", gamepadDisconnected, false);
+
+  sketch.init(defaults(p5));
+};
