@@ -1,6 +1,4 @@
 import * as sketch from "./sketch";
-import getInputs from "./getInputs";
+import defaults from "./defaults";
 
-const inputs = getInputs(p5);
-
-sketch.init(inputs);
+sketch.init(defaults(p5));
