@@ -50,6 +50,8 @@ IF %ERRORLEVEL% NEQ 0 GOTO Error
 del .\dist\bundle.js
 IF %ERRORLEVEL% NEQ 0 GOTO Error
 
+popd
+
 GOTO end
 
 :Error
@@ -80,5 +82,3 @@ exit /b %ERRORLEVEL%
 ::
 :: It can be said that there is ample room for improvement in batch file scripting.
 :end
-
-popd

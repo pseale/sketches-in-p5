@@ -59,5 +59,3 @@ exit /b 1
 
 
 :end
-
-popd
