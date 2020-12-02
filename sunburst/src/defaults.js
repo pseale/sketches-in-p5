@@ -3,7 +3,7 @@ function convertBooleanValue(urlParams, key) {
   return String(value).toLocaleLowerCase() === "true";
 }
 
-export default function getInputs() {
+module.exports = function getInputs() {
   // get stuff from the outside world
   const urlParams = new URLSearchParams(window.location.search);
   const colorIndexFromQueryString = Number(urlParams.get("c") || 0);
@@ -31,4 +31,4 @@ export default function getInputs() {
     rotationSpeed: rotationSpeedFromQueryString * 0.004,
     showBorder,
   };
-}
+};

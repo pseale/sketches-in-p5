@@ -1,4 +1,4 @@
-import * as sketch from "./sketch";
-import defaults from "./defaults";
+const sketch = require("./sketch");
+const defaults = require("./defaults");
 
 sketch.init(defaults(p5));

@@ -1,4 +1,4 @@
-import p5module from "p5";
+const p5module = require("p5");
 
 let width = Math.floor(window.innerWidth);
 let height = Math.floor(window.innerHeight);
@@ -62,9 +62,9 @@ function resizeIfNecessary() {
   }
 }
 
-export function init(i) {
+module.exports.init = function init(i) {
   inputs = i;
   // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
   new p5module(sketch);
   // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
-}
+};
