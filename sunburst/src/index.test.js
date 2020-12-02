@@ -1,5 +1,7 @@
-const getInputs = require("./defaults");
+const getInputs = require("./inputs");
 
-describe("renamed", () => {
-  test("stuff2", () => expect(true).toBe(true));
+describe("sketch", () => {
+  test("TEMPLATE_REPLACE_ME", () => {
+    const inputs = getInputs();
+  });
 });

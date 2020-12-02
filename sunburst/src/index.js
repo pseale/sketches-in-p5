@@ -1,4 +1,4 @@
 const sketch = require("./sketch");
-const defaults = require("./defaults");
+const getInputs = require("./inputs");
 
-sketch.init(defaults(p5));
+sketch.init(getInputs(p5));
