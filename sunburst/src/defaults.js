@@ -10,7 +10,6 @@ export default function getInputs() {
   const magnitudeFromQueryString = Number(urlParams.get("m") || 5);
   const raysFromQueryString = Number(urlParams.get("rays") || 32);
   const rotationSpeedFromQueryString = Number(urlParams.get("speed") || 1);
-  const showBanner = !convertBooleanValue(urlParams, "hideBanner");
   const showBorder = convertBooleanValue(urlParams, "showBorder");
 
   const redWhite = ["rgb(188, 45, 0)", "rgb(255, 255, 255, 0)"];
@@ -30,7 +29,6 @@ export default function getInputs() {
     outlineColor: tOutlineColor,
     rays: raysFromQueryString,
     rotationSpeed: rotationSpeedFromQueryString * 0.004,
-    showBanner,
     showBorder,
   };
 }

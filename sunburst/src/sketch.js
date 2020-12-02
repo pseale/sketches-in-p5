@@ -46,17 +46,6 @@ let sketch = (p5) => {
         p5.noStroke();
       }
     }
-
-    if (inputs.showBanner) {
-      const fontSize = 0.275 * width;
-      p5.stroke(inputs.outlineColor);
-      p5.strokeWeight(0.008 * width);
-      p5.fill(0);
-      p5.textFont("Verdana");
-      p5.textSize(fontSize);
-      p5.text("livecoding", 0, radiusY);
-      p5.text(".tv", radiusX * 0.9, radiusY + fontSize * 0.8);
-    }
   };
 };
 
