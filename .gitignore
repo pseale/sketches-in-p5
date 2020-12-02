@@ -4,3 +4,8 @@ dist
 # I know yall pretend like it's important to commit this, but this is how I choose to live
 package-lock.json
 .vscode
+
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
