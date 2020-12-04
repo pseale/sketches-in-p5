@@ -23,6 +23,8 @@ let sketch = (p5) => {
     p5.noStroke();
     const radiusX = width / 2;
     const radiusY = height / 2;
+    const midpointX = radiusX;
+    const midpointY = radiusY * 1.39; // the midpoint of the sunburst is a little lower than midway down the screen
     const magnitude = inputs.magnitude;
     for (let i = 0; i < inputs.rays; i++) {
       const startAngle = (i * (2 * Math.PI)) / inputs.rays + offset;
@@ -30,10 +32,10 @@ let sketch = (p5) => {
         i + 1 === inputs.rays
           ? offset
           : ((i + 1) * (2 * Math.PI)) / inputs.rays + offset;
-      const startX = magnitude * radiusX * Math.sin(startAngle) + radiusX;
-      const startY = magnitude * radiusX * Math.cos(startAngle) + radiusY;
-      const endX = magnitude * radiusX * Math.sin(endAngle) + radiusX;
-      const endY = magnitude * radiusX * Math.cos(endAngle) + radiusY;
+      const startX = magnitude * radiusX * Math.sin(startAngle) + midpointX;
+      const startY = magnitude * radiusX * Math.cos(startAngle) + midpointY;
+      const endX = magnitude * radiusX * Math.sin(endAngle) + midpointX;
+      const endY = magnitude * radiusX * Math.cos(endAngle) + midpointY;
 
       const c = inputs.colorScheme[i % inputs.colorScheme.length];
       if (inputs.showBorder) {
@@ -41,7 +43,7 @@ let sketch = (p5) => {
         p5.strokeWeight(5);
       }
       p5.fill(c);
-      p5.triangle(radiusX, radiusY, startX, startY, endX, endY);
+      p5.triangle(midpointX, midpointY, startX, startY, endX, endY);
       if (inputs.showBorder) {
         p5.noStroke();
       }
