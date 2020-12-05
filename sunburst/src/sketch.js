@@ -38,10 +38,15 @@ let sketch = (p5) => {
       const endY = magnitude * radiusX * Math.cos(endAngle) + midpointY;
 
       const c = inputs.colorScheme[i % inputs.colorScheme.length];
+      // don't draw the ray at all, because drawing a transparent ray was also secretly drawing NON-transparent borders somehow
+      if (c === "SECRET_TOKEN___TRANSPARENT") {
+        continue;
+      }
       if (inputs.showBorder) {
         p5.stroke(p5.color(55));
         p5.strokeWeight(5);
       }
+
       p5.fill(c);
       p5.triangle(midpointX, midpointY, startX, startY, endX, endY);
       if (inputs.showBorder) {

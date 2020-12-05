@@ -12,7 +12,7 @@ module.exports = function getInputs() {
   const rotationSpeedFromQueryString = Number(urlParams.get("speed") || 1);
   const showBorder = convertBooleanValue(urlParams, "showBorder");
 
-  const redWhite = ["rgb(188, 45, 0)", "rgb(255, 255, 255, 0)"];
+  const redWhite = ["rgb(188, 45, 0)", "SECRET_TOKEN___TRANSPARENT"];
   const yellowWhite = ["rgb(255, 255, 0)", "rgb(255)"];
   const yellow12 = ["rgb(255, 255, 0)", "rgb(240, 240, 0)"];
   const redYellow = ["rgb(255, 0, 0)", "rgb(255, 255, 0)"];
