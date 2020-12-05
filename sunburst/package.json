@@ -4,7 +4,7 @@
     "build": "webpack --mode=development",
     "ci": "webpack --mode=production",
     "test": "jest",
-    "test:debug:windows": "node --inspect node_modules/jest/bin/jest.js --runInBand",
+    "test:debug:windows": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand",
     "watch": "npm-run-all -p -r watch:browser watch:tests",
     "watch:browser": "webpack-dev-server --open",
     "watch:tests": "jest --watch"
