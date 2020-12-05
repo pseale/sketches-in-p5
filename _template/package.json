@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "lodash": "^4.17.20",
     "p5": "^1.1.9"
   }
 }

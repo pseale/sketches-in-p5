@@ -18,5 +18,6 @@ module.exports = {
   ],
   externals: {
     p5: "p5",
+    lodash: "lodash",
   },
 };
