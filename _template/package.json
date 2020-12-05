@@ -10,7 +10,7 @@
     "watch:tests": "jest --watch"
   },
   "author": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.6.3",
